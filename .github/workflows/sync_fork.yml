@@ -42,7 +42,3 @@ jobs:
                   echo "3. Network issues"
                   echo "Please check the logs and consider manual sync if needed."
                   exit 1
-# (放在你原有的 Check for Failure 步骤之后)
-            - name: Keepalive Workflow
-              uses: gautamkrishnar/keepalive-workflow@v2
-              # 这会在距上次 commit 接近 60 天时自动触发一次空提交，防止 cron 被 GitHub 停用
